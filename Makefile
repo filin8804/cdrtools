@@ -1,10 +1,8 @@
-Project = cdrtools
-Project_Version = 3.02
+Project = schilymake
+Project_Version = 1.2.5
 
-Extra_Configure_Flags = 
-Extra_Make_Flags =
-Install_Prefix = /usr/local
-Install_Man = /usr/local/share/man
-Install_Info = /usr/local/share/info
+install :
+	cd $(SRCROOT)/cdrtools && smake -r INS_BASE=/usr/local DESTDIR=$(DSTROOT) install
 
-include ReleaseControl/GNUSource.make
+installhdrs :
+	@echo No headers to install.
